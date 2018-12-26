@@ -56,11 +56,13 @@ function m()
     /*função pra criar o dialogo em vbs*/
     else if (cmd2 = "dlg")
     {
-        /*eu não sou obrigado a falar como isso funciona é facil ententer*/
+        /*input prompt para colocar o nome da janela do dialogo*/
         var dlgwindow = prompt("Digite o Nome da Janela do Seu Dialogo:", "");
         
+        /*input pra colocar o recado do dialogo*/
         var dlgcontent = prompt("Digite o Recado do Seu Dialogo:", "");
         
+        /*script gerado com os valores recebidos*/
         var total = 'msgbox ("' + dlgcontent + '"), vbinformation,' +  '"' + dlgwindow + '"'; /*conteudo do arquivo*/
         
         download(cmd1 , total); /*função de download com o nome do arquivo e o conteudo dele*/
